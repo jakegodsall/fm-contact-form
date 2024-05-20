@@ -4,8 +4,8 @@
   "description": "Jake Godsall's personal solution to the Contact Form challenge provided by Frontend Mentor",
   "main": "index.js",
   "scripts": {
-    "dev": "live-server",
-    "watch:sass": "sass src/styles/main.scss dist/styles/main.scss --watch"
+    "dev": "live-server src/index.html",
+    "watch:sass": "sass src/styles/main.scss dist/styles/main.css --watch"
   },
   "keywords": [],
   "author": "Jake Godsall",
