@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+:root {
+  --light-green: #e0f1e8;
+  --dark-green: #0c7d69;
+  --dark-grey: #2a4144;
+}
+
+body {
+  background-color: var(--light-green);
+}
+
 *,
 *::before,
 *::after {
@@ -8,18 +18,16 @@
   border: 0;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 ol,
 ul {
   list-style: none;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+* {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -28,6 +36,38 @@ p {
 
 p {
   color: blue;
+}
+
+.form {
+  background-color: #fff;
+  padding: 2.4rem;
+  border-radius: 1rem;
+  margin: 1.6rem;
+}
+.form__title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+
+.formInput {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+}
+.formInput__label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  margin-bottom: 0.8rem;
+}
+.formInput__input {
+  font-size: 1.2rem;
+  font-weight: 40;
+  letter-spacing: 0.1rem;
+  outline: 0.1rem solid var(--dark-grey);
+  padding: 1rem 1.6rem;
+  border-radius: 0.4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -15,14 +15,56 @@
     <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
-    <p>
-      Contact Us First Name This field is required Last Name This field is
-      required Email Address Please enter a valid email address This field is
-      required Query Type General Enquiry Support Request Please select a query
-      type Message This field is required I consent to being contacted by the
-      team To submit this form, please consent to being contacted Submit Message
-      Sent! Thanks for completing the form. We'll be in touch soon!
-    </p>
+    <form class="form" action="" method="POST" enctype="application/json">
+      <h1 class="form__title">Contact Us</h1>
+      <div class="formInput">
+        <label class="formInput__label" for="firstName">First Name</label>
+        <input
+          class="formInput__input"
+          type="text"
+          name="firstName"
+          id="firstName"
+        />
+      </div>
+      <div class="formInput">
+        <label class="formInput__label" for="firstName">Last Name</label>
+        <input
+          class="formInput__input"
+          type="text"
+          name="lastName"
+          id="lastName"
+        />
+      </div>
+      <div class="formInput">
+        <label class="formInput__label" for="firstName">Email Address</label>
+        <input class="formInput__input" type="email" name="email" id="email" />
+      </div>
+      <div class="formInput">
+        <legend class="form__inputLegend" for="firstName">Query Type</legend>
+        <div>
+          <input
+            type="radio"
+            name="queryType"
+            value="generalEnquiry"
+            id="generalEnquiry"
+          />
+          <label for="generalEnquiry">General Enquiry</label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            name="queryType"
+            value="supportRequest"
+            id="supportRequest"
+          />
+          <label for="supportRequest">Support Request</label>
+        </div>
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea name="message" id="message"></textarea>
+      </div>
+    </form>
 
     <div class="attribution">
       Challenge by
