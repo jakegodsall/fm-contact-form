@@ -18,7 +18,7 @@
     <form class="form" action="" method="POST" enctype="application/json">
       <h1 class="form__title">Contact Us</h1>
       <div class="formInput">
-        <label class="formInput__label" for="firstName">First Name</label>
+        <label class="formInput__label" for="firstName">First Name *</label>
         <input
           class="formInput__input"
           type="text"
@@ -27,7 +27,7 @@
         />
       </div>
       <div class="formInput">
-        <label class="formInput__label" for="firstName">Last Name</label>
+        <label class="formInput__label" for="firstName">Last Name *</label>
         <input
           class="formInput__input"
           type="text"
@@ -36,11 +36,11 @@
         />
       </div>
       <div class="formInput">
-        <label class="formInput__label" for="firstName">Email Address</label>
+        <label class="formInput__label" for="firstName">Email Address *</label>
         <input class="formInput__input" type="email" name="email" id="email" />
       </div>
       <div class="formRadio">
-        <legend class="formRadio__title" for="firstName">Query Type</legend>
+        <legend class="formRadio__title" for="firstName">Query Type *</legend>
         <div class="formRadio__div">
           <input
             class="formRadio__radio"
@@ -67,13 +67,25 @@
         </div>
       </div>
       <div class="formMessage">
-        <label class="formMessage__label" for="message">Message</label>
+        <label class="formMessage__label" for="message">Message *</label>
         <textarea
           class="formMessage__textArea"
           name="message"
           id="message"
           rows="16"
         ></textarea>
+      </div>
+      <div class="formConsent">
+        <div class="formConsent__customCheckbox"></div>
+        <input
+          class="formConsent__checkbox"
+          type="checkbox"
+          name="consent"
+          id="consent"
+        />
+        <label class="formConsent__label" for="consent"
+          >I consent to being contacted by the team *</label
+        >
       </div>
     </form>
 

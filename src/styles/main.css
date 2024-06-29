@@ -45,7 +45,7 @@ p {
   margin: 1.6rem;
 }
 .form__title {
-  font-size: 3rem;
+  font-size: 3r6m;
   font-weight: 600;
   margin-bottom: 3.2rem;
 }
@@ -56,13 +56,13 @@ p {
   margin-bottom: 2.4rem;
 }
 .formInput__label {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin-bottom: 0.8rem;
 }
 .formInput__input {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 40;
   letter-spacing: 0.1rem;
   outline: 0.1rem solid var(--dark-grey);
@@ -76,7 +76,7 @@ p {
   margin-bottom: 2.4rem;
 }
 .formRadio__title {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin-bottom: 1.6rem;
@@ -91,16 +91,17 @@ p {
   border-radius: 0.4rem;
 }
 .formRadio__label {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   letter-spacing: 0.1rem;
 }
 
 .formMessage {
   display: flex;
   flex-direction: column;
+  margin-bottom: 4rem;
 }
 .formMessage__label {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   margin-bottom: 0.8rem;
@@ -111,6 +112,26 @@ p {
   padding: 1.2rem 1.6rem;
   border-radius: 0.4rem;
   outline: none;
+}
+
+.formConsent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+.formConsent__checkbox {
+  visibility: hidden;
+}
+.formConsent__customCheckbox {
+  position: absolute;
+  border-radius: 0.4rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0.1rem solid var(--dark-grey);
+}
+.formConsent__label {
+  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=main.css.map */
