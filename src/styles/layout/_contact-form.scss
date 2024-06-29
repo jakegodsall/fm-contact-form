@@ -32,3 +32,31 @@
     border-radius: 0.4rem;
   }
 }
+
+.formRadio {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.4rem;
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.6rem;
+    border: 0.1rem solid var(--dark-grey);
+    padding: 1.2rem 1.6rem;
+    border-radius: 0.4rem;
+  }
+
+  &__label {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+  }
+}

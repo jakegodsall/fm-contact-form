@@ -39,25 +39,31 @@
         <label class="formInput__label" for="firstName">Email Address</label>
         <input class="formInput__input" type="email" name="email" id="email" />
       </div>
-      <div class="formInput">
-        <legend class="form__inputLegend" for="firstName">Query Type</legend>
-        <div>
+      <div class="formRadio">
+        <legend class="formRadio__title" for="firstName">Query Type</legend>
+        <div class="formRadio__div">
           <input
+            class="formRadio__radio"
             type="radio"
             name="queryType"
             value="generalEnquiry"
             id="generalEnquiry"
           />
-          <label for="generalEnquiry">General Enquiry</label>
+          <label class="formRadio__label" for="generalEnquiry"
+            >General Enquiry</label
+          >
         </div>
-        <div>
+        <div class="formRadio__div">
           <input
+            class="formRadio__radio"
             type="radio"
             name="queryType"
             value="supportRequest"
             id="supportRequest"
           />
-          <label for="supportRequest">Support Request</label>
+          <label class="formRadio__label" for="supportRequest"
+            >Support Request</label
+          >
         </div>
       </div>
       <div>
