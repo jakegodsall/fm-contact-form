@@ -39,6 +39,8 @@ p {
 }
 
 .form {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   padding: 2.4rem;
   border-radius: 1rem;
@@ -48,6 +50,15 @@ p {
   font-size: 3r6m;
   font-weight: 600;
   margin-bottom: 3.2rem;
+}
+.form__submitButton {
+  color: #fff;
+  width: 100%;
+  background-color: var(--dark-green);
+  padding: 1.6rem;
+  border-radius: 0.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 .formInput {
@@ -119,6 +130,7 @@ p {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  margin-bottom: 4rem;
 }
 .formConsent__checkbox {
   visibility: hidden;
