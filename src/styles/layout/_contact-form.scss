@@ -60,3 +60,23 @@
     letter-spacing: 0.1rem;
   }
 }
+
+.formMessage {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    font-size: 1.2rem;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__textArea {
+    resize: none;
+    border: 0.1rem solid var(--dark-grey);
+    padding: 1.2rem 1.6rem;
+    border-radius: 0.4rem;
+    outline: none;
+  }
+}
