@@ -17,53 +17,57 @@
   <body>
     <form class="form" action="" method="POST" enctype="application/json">
       <h1 class="form__title">Contact Us</h1>
-      <div class="formInput">
-        <label class="formInput__label" for="firstName">First Name *</label>
-        <input
-          class="formInput__input"
-          type="text"
-          name="firstName"
-          id="firstName"
-        />
+      <div class="form__nameSection">
+        <div class="formInput">
+          <label class="formInput__label" for="firstName">First Name *</label>
+          <input
+            class="formInput__input"
+            type="text"
+            name="firstName"
+            id="firstName"
+          />
+        </div>
+        <div class="formInput">
+          <label class="formInput__label" for="lastName">Last Name *</label>
+          <input
+            class="formInput__input"
+            type="text"
+            name="lastName"
+            id="lastName"
+          />
+        </div>
       </div>
       <div class="formInput">
-        <label class="formInput__label" for="firstName">Last Name *</label>
-        <input
-          class="formInput__input"
-          type="text"
-          name="lastName"
-          id="lastName"
-        />
-      </div>
-      <div class="formInput">
-        <label class="formInput__label" for="firstName">Email Address *</label>
+        <label class="formInput__label" for="email">Email Address *</label>
         <input class="formInput__input" type="email" name="email" id="email" />
       </div>
       <div class="formRadio">
-        <legend class="formRadio__title" for="firstName">Query Type *</legend>
-        <div class="formRadio__div">
-          <input
-            class="formRadio__radio"
-            type="radio"
-            name="queryType"
-            value="generalEnquiry"
-            id="generalEnquiry"
-          />
-          <label class="formRadio__label" for="generalEnquiry"
-            >General Enquiry</label
-          >
-        </div>
-        <div class="formRadio__div">
-          <input
-            class="formRadio__radio"
-            type="radio"
-            name="queryType"
-            value="supportRequest"
-            id="supportRequest"
-          />
-          <label class="formRadio__label" for="supportRequest"
-            >Support Request</label
-          >
+        <legend class="formRadio__title" for="queryType">Query Type *</legend>
+        <div class="formRadio__radios">
+          <div class="formRadio__div">
+            <input
+              class="formRadio__radio"
+              type="radio"
+              name="queryType"
+              value="generalEnquiry"
+              id="generalEnquiry"
+            />
+            <label class="formRadio__label" for="generalEnquiry"
+              >General Enquiry</label
+            >
+          </div>
+          <div class="formRadio__div">
+            <input
+              class="formRadio__radio"
+              type="radio"
+              name="queryType"
+              value="supportRequest"
+              id="supportRequest"
+            />
+            <label class="formRadio__label" for="supportRequest"
+              >Support Request</label
+            >
+          </div>
         </div>
       </div>
       <div class="formMessage">
@@ -72,7 +76,6 @@
           class="formMessage__textArea"
           name="message"
           id="message"
-          rows="16"
         ></textarea>
       </div>
       <div class="formConsent">

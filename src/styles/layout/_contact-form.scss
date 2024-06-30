@@ -5,6 +5,8 @@
   padding: 2.4rem;
   border-radius: 1rem;
   margin: 1.6rem;
+  max-width: 400px;
+  margin-top: 4rem;
 
   &__title {
     font-size: 3r6m;
@@ -86,6 +88,7 @@
   }
 
   &__textArea {
+    height: 24rem;
     resize: none;
     border: 0.1rem solid var(--dark-grey);
     padding: 1.2rem 1.6rem;
@@ -115,5 +118,47 @@
 
   &__label {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .form {
+    width: 70%;
+    max-width: 690px;
+    padding: 4rem;
+
+    &__title {
+      font-size: 3.2rem;
+    }
+
+    &__nameSection {
+      display: flex;
+      gap: 1.6rem;
+
+      div {
+        flex: 1;
+      }
+    }
+  }
+
+  .formRadio__radios {
+    display: flex;
+    gap: 1.6rem;
+
+    div {
+      flex: 1;
+    }
+  }
+
+  .formRadio {
+    div div {
+      padding-inline: 2.4rem;
+    }
+  }
+
+  .formMessage {
+    &__textArea {
+      height: 13rem;
+    }
   }
 }
