@@ -146,4 +146,18 @@ p {
   font-size: 1.6rem;
 }
 
+.attribution {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+.attribution a {
+  text-decoration: none;
+}
+.attribution a:visited,
+.attribution a:link {
+  color: var(--dark-green);
+}
+
 /*# sourceMappingURL=main.css.map */
