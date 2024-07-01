@@ -32,6 +32,7 @@
             name="firstName"
             id="firstName"
           />
+          <p class="error-message"></p>
         </div>
         <div class="formInput">
           <label class="formInput__label" for="lastName">Last Name *</label>
@@ -41,11 +42,13 @@
             name="lastName"
             id="lastName"
           />
+          <p class="error-message"></p>
         </div>
       </div>
       <div class="formInput">
         <label class="formInput__label" for="email">Email Address *</label>
         <input class="formInput__input" type="email" name="email" id="email" />
+        <p class="error-message"></p>
       </div>
       <div class="formRadio">
         <legend class="formRadio__title" for="queryType">Query Type *</legend>
@@ -59,6 +62,7 @@
               id="generalEnquiry"
               checked="true"
             />
+            <p class="error-message"></p>
             <label class="formRadio__label" for="generalEnquiry"
               >General Enquiry</label
             >
@@ -84,6 +88,7 @@
           name="message"
           id="message"
         ></textarea>
+        <p class="error-message"></p>
       </div>
       <div class="formConsent">
         <div class="formConsent__customCheckbox"></div>
