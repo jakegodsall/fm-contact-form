@@ -7,6 +7,7 @@ const emailFormInput = document.getElementById("email");
 const messageFormInput = document.getElementById("message");
 
 const vmh = new ValidationMessageHandler(form);
+console.log(vmh.inputs);
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();

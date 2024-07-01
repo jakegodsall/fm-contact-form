@@ -16,12 +16,11 @@ export class FormValidator {
 export class ValidationMessageHandler {
   constructor(form) {
     this.form = form;
-    this.inputs = form.elements;
+    this.inputs = Array.from(form.elements);
   }
 
   showValidationMessage(element, message) {
     const errorMessage = element.nextElementSibling;
-
     errorMessage.textContent = message;
     element.classList.add("invalid");
   }
@@ -33,12 +32,18 @@ export class ValidationMessageHandler {
   }
 
   clearAllValidation() {
-    document
-      .querySelectorAll(".form .error-message")
-      .forEach((errorMessage) => {
+    this.inputs
+      .filter(
+        (input) =>
+          input.type === "text" ||
+          input.type === "email" ||
+          input.type === "textarea"
+      )
+      .forEach((element) => {
+        const errorMessage = element.nextElementSibling;
         errorMessage.textContent = "";
       });
-    document.querySelectorAll(".form .invalid").forEach((input) => {
+    this.inputs.forEach((input) => {
       input.classList.remove("invalid");
     });
   }
