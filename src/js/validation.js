@@ -1,0 +1,45 @@
+export class FormValidator {
+  constructor() {
+    throw new Error("This class cannot be instantiated");
+  }
+
+  static stringIsNotEmpty(input) {
+    return input.length !== 0;
+  }
+
+  static stringIsValidEmail(input) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(input);
+  }
+}
+
+export class ValidationMessageHandler {
+  constructor(form) {
+    this.form = form;
+    this.inputs = form.elements;
+  }
+
+  showValidationMessage(element, message) {
+    const errorMessage = element.nextElementSibling;
+
+    errorMessage.textContent = message;
+    element.classList.add("invalid");
+  }
+
+  clearValidationMessage(element) {
+    const errorMessage = element.nextElementSibling;
+    errorMessage.textContent = "";
+    element.classList.remove("remove");
+  }
+
+  clearAllValidation() {
+    document
+      .querySelectorAll(".form .error-message")
+      .forEach((errorMessage) => {
+        errorMessage.textContent = "";
+      });
+    document.querySelectorAll(".form .invalid").forEach((input) => {
+      input.classList.remove("invalid");
+    });
+  }
+}

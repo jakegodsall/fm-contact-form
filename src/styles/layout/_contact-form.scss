@@ -167,3 +167,7 @@
 .invalid {
   outline: 0.1rem solid red;
 }
+
+.disabled {
+  cursor: not-allowed;
+}
