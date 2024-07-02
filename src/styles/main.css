@@ -101,7 +101,6 @@ p {
 .formRadio__div {
   display: flex;
   align-items: center;
-  gap: 1rem;
   margin-bottom: 1.6rem;
   border: 0.1rem solid var(--dark-grey);
   padding: 1.2rem 1.6rem;
@@ -110,6 +109,37 @@ p {
 .formRadio__label {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
+  margin-left: 1rem;
+}
+.formRadio__customRadio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: 0.1rem solid var(--dark-green);
+  border-radius: 50%;
+}
+.formRadio__customRadio.checked::before {
+  content: "";
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--dark-green);
+  border-radius: 50%;
+}
+.formRadio__customRadio.checked::after {
+  content: "";
+  position: absolute;
+  width: 1.2em;
+  height: 1.2rem;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.formRadio__radio {
+  display: none;
 }
 
 .formMessage {
