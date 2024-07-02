@@ -4,6 +4,7 @@ const form = document.forms[0];
 const firstNameFormInput = document.getElementById("firstName");
 const lastNameFormInput = document.getElementById("lastName");
 const emailFormInput = document.getElementById("email");
+const radioDivs = document.querySelectorAll(".formRadio__div");
 const messageFormInput = document.getElementById("message");
 
 const vmh = new ValidationMessageHandler(form);
@@ -54,7 +55,16 @@ form.addEventListener("submit", function (event) {
   console.log(data);
 });
 
-// function disableSubmitButton() {
-//   const submitButton = document.getElementById("submit-button");
-//   submitButton.classList.add("disabled");
-// }
+radioDivs.forEach((radioDiv) => {
+  console.log(radioDiv);
+  radioDiv.addEventListener("click", function () {
+    checkRadio(radioDiv);
+  });
+});
+
+function checkRadio(div) {
+  const radioButton = div.querySelector('input[type="radio"');
+  if (radioButton) {
+    radioButton.checked = true;
+  }
+}
