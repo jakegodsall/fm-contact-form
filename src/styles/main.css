@@ -200,13 +200,11 @@ p {
     flex: 1;
   }
   .formRadio__radios {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.6rem;
   }
-  .formRadio__radios div {
-    flex: 1;
-  }
-  .formRadio div div {
+  .formRadio__div {
     padding-inline: 2.4rem;
   }
   .formMessage__textArea {

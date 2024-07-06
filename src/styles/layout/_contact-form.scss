@@ -179,16 +179,13 @@
   }
 
   .formRadio__radios {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 1.6rem;
-
-    div {
-      flex: 1;
-    }
   }
 
   .formRadio {
-    div div {
+    &__div {
       padding-inline: 2.4rem;
     }
   }
