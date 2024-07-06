@@ -105,41 +105,40 @@ p {
   border: 0.1rem solid var(--dark-grey);
   padding: 1.2rem 1.6rem;
   border-radius: 0.4rem;
+  cursor: pointer;
+}
+.formRadio__div.checked {
+  background-color: var(--light-green);
+}
+.formRadio__radio {
+  display: none;
 }
 .formRadio__label {
   font-size: 1.6rem;
   letter-spacing: 0.1rem;
   margin-left: 1rem;
+  cursor: pointer;
 }
 .formRadio__customRadio {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
   width: 1.5rem;
   height: 1.5rem;
+  outline: 0.1rem solid var(--dark-grey);
+  border-radius: 100%;
+}
+.formRadio__customRadio.checked {
   outline: 0.1rem solid var(--dark-green);
-  border-radius: 50%;
 }
 .formRadio__customRadio.checked::before {
   content: "";
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
+  display: flex;
+  width: 1rem;
+  height: 1rem;
   background-color: var(--dark-green);
   border-radius: 50%;
-}
-.formRadio__customRadio.checked::after {
-  content: "";
-  position: absolute;
-  width: 1.2em;
-  height: 1.2rem;
-  background-color: #fff;
-  border-radius: 50%;
-}
-.formRadio__radio {
-  display: none;
 }
 
 .formMessage {

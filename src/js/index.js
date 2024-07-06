@@ -59,16 +59,18 @@ radioDivs.forEach((radioDiv) => {
   console.log(radioDiv);
   radioDiv.addEventListener("click", function () {
     radioDivs.forEach((radioDiv) => {
-        radioDiv.firstElementChild.classList.remove("checked");
+      radioDiv.classList.remove("checked");
+      radioDiv.firstElementChild.classList.remove("checked");
     });
     checkRadio(radioDiv);
   });
 });
 
 function checkRadio(div) {
-  const radioButton = div.querySelector('input[type="radio"');
+  const radioButton = div.querySelector('input[type="radio"]');
   if (radioButton) {
     radioButton.checked = true;
     div.firstElementChild.classList.toggle("checked");
+    div.classList.toggle("checked");
   }
 }
