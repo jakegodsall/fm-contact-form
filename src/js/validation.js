@@ -1,3 +1,4 @@
+// provides basic validation methods for input strings
 export class FormValidator {
   constructor() {
     throw new Error("This class cannot be instantiated");
@@ -13,6 +14,7 @@ export class FormValidator {
   }
 }
 
+// encapsulation of validation message show/hide logic
 export class ValidationMessageHandler {
   constructor(form) {
     this.form = form;
@@ -48,4 +50,3 @@ export class ValidationMessageHandler {
     });
   }
 }
-

@@ -20,6 +20,8 @@ form.addEventListener("submit", function (event) {
   const fd = new FormData(event.target);
   const data = Object.fromEntries(fd.entries());
 
+  console.log(data);
+
   // First Name
   if (!FormValidator.stringIsNotEmpty(data.firstName)) {
     vmh.showValidationMessage(
@@ -52,8 +54,18 @@ form.addEventListener("submit", function (event) {
     );
     formDataIsValid = false;
   }
+
+  // consent button
+  console.log(checkboxInput.value);
+  if (!checkboxInput.checked) {
+    vmh.showValidationMessage(
+      checkboxInput,
+      "To submit this form, please consent to being contacted"
+    );
+  }
 });
 
+// handle active state of radio buttons
 radioDivs.forEach((radioDiv) => {
   radioDiv.addEventListener("click", function () {
     radioDivs.forEach((radioDiv) => {
@@ -64,6 +76,7 @@ radioDivs.forEach((radioDiv) => {
   });
 });
 
+// handle active state of consent checkbox
 checkboxInput.addEventListener("change", function () {
   CheckFormInputs.checkCheckbox(checkboxInput);
 });
