@@ -6,9 +6,9 @@ const lastNameFormInput = document.getElementById("lastName");
 const emailFormInput = document.getElementById("email");
 const radioDivs = document.querySelectorAll(".formRadio__div");
 const messageFormInput = document.getElementById("message");
+const checkboxInput = document.getElementById("consent");
 
 const vmh = new ValidationMessageHandler(form);
-console.log(vmh.inputs);
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -51,12 +51,9 @@ form.addEventListener("submit", function (event) {
     );
     formDataIsValid = false;
   }
-
-  console.log(data);
 });
 
 radioDivs.forEach((radioDiv) => {
-  console.log(radioDiv);
   radioDiv.addEventListener("click", function () {
     radioDivs.forEach((radioDiv) => {
       radioDiv.classList.remove("checked");
@@ -74,3 +71,13 @@ function checkRadio(div) {
     div.classList.toggle("checked");
   }
 }
+
+function checkCheckbox(checkboxInput) {
+  console.log(checkboxInput);
+  const customCheckbox = checkboxInput.previousElementSibling;
+  customCheckbox.classList.toggle("checked");
+}
+
+checkboxInput.addEventListener("change", function () {
+  checkCheckbox(checkboxInput);
+});
