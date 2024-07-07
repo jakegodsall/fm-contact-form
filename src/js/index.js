@@ -1,3 +1,4 @@
+import CheckFormInputs from "./active-states.js";
 import { FormValidator, ValidationMessageHandler } from "./validation.js";
 
 const form = document.forms[0];
@@ -59,25 +60,10 @@ radioDivs.forEach((radioDiv) => {
       radioDiv.classList.remove("checked");
       radioDiv.firstElementChild.classList.remove("checked");
     });
-    checkRadio(radioDiv);
+    CheckFormInputs.checkRadio(radioDiv);
   });
 });
 
-function checkRadio(div) {
-  const radioButton = div.querySelector('input[type="radio"]');
-  if (radioButton) {
-    radioButton.checked = true;
-    div.firstElementChild.classList.toggle("checked");
-    div.classList.toggle("checked");
-  }
-}
-
-function checkCheckbox(checkboxInput) {
-  console.log(checkboxInput);
-  const customCheckbox = checkboxInput.previousElementSibling;
-  customCheckbox.classList.toggle("checked");
-}
-
 checkboxInput.addEventListener("change", function () {
-  checkCheckbox(checkboxInput);
+  CheckFormInputs.checkCheckbox(checkboxInput);
 });
